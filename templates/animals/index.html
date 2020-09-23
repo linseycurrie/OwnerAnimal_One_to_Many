@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for animal in all_animals %}
+    {{animal.owner.name}} own a  {{animal.type}} called {{animal.name}} <br>
+
+    <form  action="/animals/{{animal.id}}/delete" method="post">
+        <button class="trash-button">delete<i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
+    </form>
+{% endfor %}
+
+
+{% endblock %}
