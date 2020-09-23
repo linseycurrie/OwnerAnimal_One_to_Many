@@ -9,7 +9,7 @@ CREATE TABLE owners (
 CREATE TABLE animals ( 
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    type VARCHAR(255),
+    animal_type VARCHAR(255),
     owner_id INT REFERENCES owners(id)
 );
 

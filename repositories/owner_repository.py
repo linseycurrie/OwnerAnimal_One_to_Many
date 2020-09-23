@@ -20,3 +20,12 @@ def select(id):
     if results is not None:
         owner = Owner(results['name'], results['id'])
     return owner
+
+def select_all():
+    owners= []
+    sql = "SELECT * FROM owners"
+    results = run_sql(sql)
+    for row in results:
+        owner = Owner(row['name'])
+        owners.append(owner)
+    return owners

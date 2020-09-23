@@ -3,12 +3,21 @@
 {% block content %}
 
 {% for animal in all_animals %}
-    {{animal.owner.name}} own a  {{animal.type}} called {{animal.name}} <br>
-
-    <form  action="/animals/{{animal.id}}/delete" method="post">
-        <button class="trash-button">delete<i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
+<div class="animal">
+    <div class="content">
+        {{animal.owner.name}}
+        <div class="name">
+            {{animal.name}}
+            <div class="animal_type">
+                {{animal.animal_type}}
+            </div>
+        </div>
+    </div>
+</div>
+    <form  action="/animals/{{ animal.id }}/delete" method="POST">
+        <button>delete</button>
     </form>
 {% endfor %}
 
 
-{% endblock %}
+{% endblock %} 

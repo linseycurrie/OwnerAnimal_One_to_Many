@@ -1,7 +1,7 @@
 class Animal:
 
-    def __init__(self, name, type, owner, id=None):
+    def __init__(self, name, animal_type, owner, id=None):
         self.name = name
-        self.type = type
+        self.animal_type = animal_type
         self.owner= owner
         self.id = id
